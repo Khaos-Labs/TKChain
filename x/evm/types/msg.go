@@ -32,7 +32,7 @@ var big8 = big.NewInt(8)
 const (
 	// TypeMsgEthereumTx defines the type string of an Ethereum tranasction
 	TypeMsgEthereumTx = "ethereum"
-	// TypeMsgEthermint defines the type string of Ethermint message
+	// TypeMsgEthermint defines the type string of Tkchain message
 	TypeMsgEthermint = "tkchain"
 )
 
