@@ -1,7 +1,7 @@
 #!/bin/bash
 
 KEY="tkchain-mainnet-bxlkm"
-CHAINID="tkchain-1"
+CHAINID="tkchain-65"
 MONIKER="tkchain-mainnet-1"
 
 # remove existing daemon and client
@@ -65,6 +65,6 @@ tkchaind validate-genesis
 # Command to run the rest server in a different terminal/window
 echo -e '\nrun the following command in a different terminal/window to run the REST server and JSON-RPC:'
 echo -e "tkchaincli rest-server --laddr \"tcp://localhost:8545\" --wsport 8546 --unlock-key $KEY --chain-id $CHAINID --trace --rpc-api "web3,eth,net"\n"
-
+tkchaincli keys unsafe-export-eth-key $KEY
 # Start the node (remove the --pruning=nothing flag if historical queries are not needed)
 tkchaind start --pruning=nothing --rpc.unsafe --log_level "main:info,state:info,mempool:info" --trace
