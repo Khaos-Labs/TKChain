@@ -31,12 +31,6 @@ parent:
   <a href="https://discord.gg/AzefAFd">
     <img alt="Discord" src="https://img.shields.io/discord/669268347736686612.svg" />
   </a>
-  <a href="https://github.com/Khaos-Labs/tkchain/actions?query=workflow%3ABuild">
-    <img alt="Build Status" src="https://github.com/Khaos-Labs/tkchain/workflows/Build/badge.svg" />
-  </a>
-  <a href="https://github.com/Khaos-Labs/tkchain/actions?query=workflow%3ALint">
-    <img alt="Lint Status" src="https://github.com/Khaos-Labs/tkchain/workflows/Lint/badge.svg" />
-  </a>
 </div>
 
 Tkchain is a scalable, high-throughput Proof-of-Stake blockchain that is fully compatible and
