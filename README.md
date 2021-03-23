@@ -43,6 +43,7 @@ interoperable with Ethereum. It's build using the the [Cosmos SDK](https://githu
 ## Build
 
 Install Go
+
 Install go by following the official docs. Remember to set your $PATH environment variable, for example:https://golang.org/doc/install 
 
 mkdir -p $HOME/go/bin
@@ -76,15 +77,6 @@ NOTE: If you still have issues at this step, please check that you have the late
 That will install the gaiad binary. Verify that everything is OK:
 
 tkchaind version --long
-
-tkchaind for instance should output something similar to:
-
-name: tkchaind
-server_name: tkchaind
-version: 2.0.3
-commit: 2f6783e298f25ff4e12cb84549777053ab88749a
-build_tags: netgo,ledger
-go: go version go1.12.5 darwin/amd64
 
 ## Quick Start
 
