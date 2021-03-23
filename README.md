@@ -40,6 +40,52 @@ interoperable with Ethereum. It's build using the the [Cosmos SDK](https://githu
 
 **Note**: Requires [Go 1.15+](https://golang.org/dl/)
 
+## Build
+
+Install Go
+Install go by following the official docs. Remember to set your $PATH environment variable, for example:https://golang.org/doc/install 
+
+mkdir -p $HOME/go/bin
+
+echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.bash_profile
+
+source ~/.bash_profile
+
+::: tip Go 1.15+ is required for the Cosmos SDK. :::
+
+git clone https://github.com/Khaos-Labs/tkchain.git
+
+cd tkchain && make install
+
+If this command fails due to the following error message, you might have already set LDFLAGS prior to running this step.
+
+github.com/Khaos-Labs/tkchain/cmd/tkchaind
+
+flag provided but not defined: -L
+
+usage: link [options] main.o
+...
+make: *** [install] Error 2
+
+Unset this environment variable and try again.
+
+LDFLAGS="" make install
+
+NOTE: If you still have issues at this step, please check that you have the latest stable version of GO installed.
+
+That will install the gaiad binary. Verify that everything is OK:
+
+tkchaind version --long
+
+tkchaind for instance should output something similar to:
+
+name: tkchaind
+server_name: tkchaind
+version: 2.0.3
+commit: 2f6783e298f25ff4e12cb84549777053ab88749a
+build_tags: netgo,ledger
+go: go version go1.12.5 darwin/amd64
+
 ## Quick Start
 
 To learn how the Tkchain works from a high-level perspective, go to the [Introduction](./docs/intro/overview.md) section from the documentation.
